@@ -43,7 +43,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "junction"
+name = "junction-verbatim"
 version = "1.3.0"
 dependencies = [
  "scopeguard",
