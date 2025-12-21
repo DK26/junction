@@ -36,7 +36,7 @@ use std::path::{Path, PathBuf};
 /// use std::io;
 /// use std::path::Path;
 /// # use std::fs;
-/// # use junction::create;
+/// # use junction_verbatim::create;
 /// fn main() -> io::Result<()> {
 ///     let tmpdir = tempfile::tempdir()?;
 ///     let target = tmpdir.path().join("target");
@@ -66,7 +66,7 @@ where
 /// use std::io;
 /// use std::path::Path;
 /// # use std::fs;
-/// # use junction::{create, delete};
+/// # use junction_verbatim::{create, delete};
 /// fn main() -> io::Result<()> {
 ///     let tmpdir = tempfile::tempdir()?;
 ///     let target = tmpdir.path().join("target");
@@ -86,7 +86,7 @@ pub fn delete<P: AsRef<Path>>(junction: P) -> io::Result<()> {
 ///
 /// ```rust
 /// use std::io;
-/// # use junction::exists;
+/// # use junction_verbatim::exists;
 /// fn main() -> io::Result<()> {
 ///     # #[cfg(feature = "unstable_admin")]
 ///     assert!(exists(r"C:\Users\Default User")?);
@@ -105,7 +105,7 @@ pub fn exists<P: AsRef<Path>>(junction: P) -> io::Result<bool> {
 ///
 /// ```rust
 /// use std::io;
-/// # use junction::get_target;
+/// # use junction_verbatim::get_target;
 /// fn main() -> io::Result<()> {
 ///     # #[cfg(feature = "unstable_admin")]
 ///     assert_eq!(get_target(r"C:\Users\Default User")?.to_str(), Some(r"C:\Users\Default"));
